@@ -1,5 +1,18 @@
-import {print} from "./feature.js";
+import {initialPageLoad} from "./initialPageLoad.js";
+import {aboutPageLoader} from "./aboutPageLoader.js";
+import {menuPageLoader} from "./menuPageLoader.js";
 import "./styles.css"; 
 
-print("Hello, world!");
-document.body.innerHTML=`${"Hello, world!"}`;
+initialPageLoad();
+
+document.querySelector(".homeButton").addEventListener("click", ()=>{
+    initialPageLoad();
+})
+
+document.querySelector(".aboutButton").addEventListener("click", ()=>{
+    aboutPageLoader();
+})
+
+document.querySelector(".menuButton").addEventListener("click", ()=>{
+    menuPageLoader();
+})
